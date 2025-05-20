@@ -1,5 +1,13 @@
 # Dag 2
 
+## Installer vscode
+
+https://code.visualstudio.com/docs/setup/linux
+
+### Plugins
+
+Installer tillegg Remote - SSH
+
 ## Installer Docker
 
 https://docs.docker.com/engine/install/ubuntu/
