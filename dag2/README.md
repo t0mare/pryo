@@ -20,9 +20,9 @@ https://github.com/itzg/docker-minecraft-server
 
 https://docs.docker.com/compose/gettingstarted/
 
-- Start server: docker compose up -d
-- Logger: docker compose logs -f
-- Stop server: docker compose down
+- Start server: ```docker compose up -d```
+- Logger: ```docker compose logs -f```
+- Stop server: ```docker compose down```
 
 ### docker-compose.yml
 
