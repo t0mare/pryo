@@ -62,7 +62,7 @@ global:
 scrape_configs:
   - job_name: 'minecraft'
     static_configs:
-      - targets: ['localhost:9940']
+      - targets: ['localhost:9100']
         labels:
           server_name: 'minecraft'
 ```
