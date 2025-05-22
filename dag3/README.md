@@ -15,7 +15,7 @@ services:
     container_name: mc-server
     ports:
       - "25565:25565"
-      - "9940:9940" # Port for Prometheus exporter
+      - "9100:9100" # Port for Prometheus exporter
     environment:
       EULA: "TRUE"
       MEMORY: "4G"
