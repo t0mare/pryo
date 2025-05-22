@@ -2,7 +2,11 @@
 
 ## Metrikker i Minecraft server
 
+### Installer plugin
+
 https://github.com/sladkoff/minecraft-prometheus-exporter
+
+### docker-compose.yml plugin
 
 ```yaml
 services:
@@ -25,7 +29,8 @@ services:
 
 ## Prometheus
 
-### docker-compose.yml
+### docker-compose.yml prometheus
+
 ```yaml
 services:
   prometheus:
@@ -46,7 +51,7 @@ services:
     networks:
 ```
 
-### prometheus.yml
+### prometheus.yml minecraft
 
 ```yaml
 global:
@@ -59,12 +64,12 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9940']
         labels:
-          server_name: 'my-awesome-server'
+          server_name: 'minecraft'
 ```
 
 ## Metrikker fra Raspberry pi
 
-### docker-compose.yml
+### docker-compose.yml node_exporter
 
 ```yaml
 node_exporter:
@@ -85,7 +90,7 @@ node_exporter:
   restart: unless-stopped
 ```
 
-### promethus.yml
+### promethus.yml node_exporter
 
 ```yaml
 - job_name: 'node_exporter'
