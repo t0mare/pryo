@@ -71,6 +71,8 @@ scrape_configs:
 
 ## Metrikker fra Raspberry pi
 
+https://prometheus.io/docs/guides/node-exporter/
+
 ### docker-compose.yml node_exporter
 
 ```yaml
