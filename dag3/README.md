@@ -4,7 +4,7 @@
 
 ### Installer plugin
 
-https://github.com/sladkoff/minecraft-prometheus-exporter
+https://github.com/Cubxity/UnifiedMetrics
 
 ### docker-compose.yml plugin
 
