@@ -80,12 +80,13 @@ node_exporter:
   image: prom/node-exporter:latest # Use an ARM-compatible version if needed, though 'latest' often works
   container_name: node_exporter
   ports:
-    - "9100:9100" # Expose on the host
+    - "9200:9200" # Expose on the host
   volumes:
     - /proc:/host/proc:ro
     - /sys:/host/sys:ro
     - /:/rootfs:ro
   command:
+    - '--web.listen-address=:9200'
     - '--path.procfs=/host/proc'
     - '--path.sysfs=/host/sys'
     - '--path.rootfs=/rootfs'
@@ -99,7 +100,7 @@ node_exporter:
 ```yaml
 - job_name: 'node_exporter'
    static_configs:
-     - targets: ['node_exporter:9100']
+     - targets: ['node_exporter:9200']
        labels:
          instance: 'raspberry-pi-5'
 ```
