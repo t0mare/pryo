@@ -1,4 +1,4 @@
-# Dag 2
+# Dag 2 - Minecraft server
 
 ## Installer vscode
 
