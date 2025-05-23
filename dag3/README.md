@@ -38,6 +38,7 @@ services:
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus
+    user: "1000:1000"
     ports:
       - "9090:9090"
     volumes:
@@ -64,7 +65,7 @@ global:
 scrape_configs:
   - job_name: 'minecraft'
     static_configs:
-      - targets: ['localhost:9100']
+      - targets: ['mc-server:9100']
         labels:
           server_name: 'minecraft'
 ```
@@ -102,5 +103,5 @@ node_exporter:
    static_configs:
      - targets: ['node_exporter:9200']
        labels:
-         instance: 'raspberry-pi-5'
+         instance: 'rpi5'
 ```
